@@ -32,7 +32,7 @@ public class ParametrizedTestHateMethodSource {
     }
 
     @MethodSource
-    @ParameterizedTest(name = "хз как тебя пока назвать")
+    @ParameterizedTest(name = "Проверка наличия кнопок из списка {1} на сайте vk в локали {0}")
     void methodSource(String locale, List<String> buttons) {
         $(".footer_lang").$(byText(locale)).click();
         $$(".footer_links").filter(visible)
