@@ -19,6 +19,7 @@ public class ParameterizdeTestTwo {
         Configuration.holdBrowserOpen = true;
         open("https://rivegauche.ru/");
     }
+    
     @Disabled("Task-12345")
     @CsvFileSource(resources = "src/test/resources/country.csv")
     @ParameterizedTest(name = "Проверка изменения страны на {0}")
@@ -28,6 +29,7 @@ public class ParameterizdeTestTwo {
     $(byText(country)).click();
     $(".ng-value-container").shouldHave(text(country));
     }
+    
     @ValueSource(strings = {"Беларусь", "Казахстан"})
     @ParameterizedTest(name = "Проверка изменения страны на {0}")
     void parameterizdeTest(String arg) {
