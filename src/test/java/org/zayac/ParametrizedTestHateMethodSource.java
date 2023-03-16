@@ -38,12 +38,11 @@ public class ParametrizedTestHateMethodSource {
         $$(".footer_links").filter(visible)
                 .shouldHave(CollectionCondition.texts(buttons));
     }
+    
     @Disabled("Task-12345")
     @Test
     void metodTest() {
     $(".footer_lang").$(byText("English")).click();
     $(".footer_links").shouldHave(text("О ВКонтакте"));
-
     }
-
 }
